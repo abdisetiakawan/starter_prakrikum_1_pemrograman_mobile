@@ -30,15 +30,6 @@ Setiap mahasiswa **wajib mengumpulkan laporan di e-learning** dengan isi sebagai
 
 ---
 
-## ✅ Kriteria Penilaian
-| Aspek | Bobot |
-|-------|-------|
-| Kode berhasil dijalankan tanpa error | 30% |
-| Mengikuti codelab namun dengan ikon/animasi berbeda | 30% |
-| Kreativitas tambahan (variasi curve, warna, animasi ekstra) | 20% |
-| Laporan di e-learning (dokumentasi + langkah-langkah + link GitHub) | 20% |
-
----
 
 ## 📚 Referensi
 - [Flutter Codelab: Advanced Animations](https://codelabs.developers.google.com/advanced-flutter-animations)  
