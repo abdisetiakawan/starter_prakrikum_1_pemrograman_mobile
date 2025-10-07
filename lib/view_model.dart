@@ -9,6 +9,12 @@ class QuizViewModel extends ChangeNotifier {
   int answeredQuestionCount = 0;
   int score = 0;
   bool didAnswerQuestion = false;
+  int? selectedAnswerIndex;
+
+  bool get isAnswerCorrect =>
+      selectedAnswerIndex != null &&
+      selectedAnswerIndex == currentQuestion?.correctAnswer;
+
   bool get hasNextQuestion => answeredQuestionCount < totalQuestions;
 
   QuizViewModel({required this.onGameOver}) {
@@ -23,12 +29,19 @@ class QuizViewModel extends ChangeNotifier {
     }
 
     didAnswerQuestion = false;
+    selectedAnswerIndex = null;
 
     notifyListeners();
   }
 
   void checkAnswer(int selectedIndex) {
-    if (!didAnswerQuestion && currentQuestion?.correctAnswer == selectedIndex) {
+    if (didAnswerQuestion) {
+      return;
+    }
+
+    selectedAnswerIndex = selectedIndex;
+
+    if (currentQuestion?.correctAnswer == selectedIndex) {
       score++;
     }
 
