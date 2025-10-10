@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import 'background_audio.dart';
 import 'question_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,7 +25,14 @@ class _HomeScreenState extends State<HomeScreen>
   );
 
   @override
+  void initState() {
+    super.initState();
+    BackgroundAudio.instance.play();
+  }
+
+  @override
   void dispose() {
+    BackgroundAudio.instance.stop();
     _controller
       ..stop()
       ..dispose();

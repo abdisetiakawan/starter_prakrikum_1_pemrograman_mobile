@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'background_audio.dart';
 import 'home_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await BackgroundAudio.instance.initialize();
   runApp(const MainApp());
 }
 

@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   animations: ^2.0.11
   flutter_tts: ^3.6.3
+  audioplayers: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -19,3 +20,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/audio/hidup_jokowi.mp3
